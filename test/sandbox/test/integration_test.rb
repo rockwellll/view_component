@@ -752,8 +752,6 @@ class IntegrationTest < ActionDispatch::IntegrationTest
   end
   
   def test_component_with_error_not_rendered
-    assert_raises ArgumentError do
-      get "/component_with_error_not_rendered"
-    end
+    assert_raises ArgumentError { get "/component_with_error_not_rendered" }
   end
 end
