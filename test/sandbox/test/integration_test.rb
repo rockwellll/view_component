@@ -752,6 +752,9 @@ class IntegrationTest < ActionDispatch::IntegrationTest
   end
   
   def test_component_with_error_not_rendered
-    assert_raises ArgumentError { get "/component_with_error_not_rendered" }
+    get "/component_with_error_not_rendered"
+    
+    assert_response :success
+    assert_select("p", "This content will not be rendered")
   end
 end
