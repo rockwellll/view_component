@@ -750,4 +750,10 @@ class IntegrationTest < ActionDispatch::IntegrationTest
       "Rendering UnsafePostambleComponent did not emit an HTML safety warning"
     )
   end
+  
+  def test_component_with_error_not_rendered
+    assert_raises ArgumentError do
+      get "/component_with_error_not_rendered"
+    end
+  end
 end

@@ -71,4 +71,7 @@ class IntegrationExamplesController < ActionController::Base
   def unsafe_postamble_component
     render(UnsafePostambleComponent.new)
   end
+  
+  def component_with_error_not_rendered
+  end
 end
